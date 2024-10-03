@@ -22,6 +22,9 @@ class Terminal {
         this.inbuiltCommands = this.getCommands() || [];
     }
 
+    addCommands(commands: Command[]) {
+        this.inbuiltCommands.push(...commands);
+    }
 
     getCurrentDir(){
         return this.currentDir.endsWith('/') ? this.currentDir : this.currentDir+'/';
